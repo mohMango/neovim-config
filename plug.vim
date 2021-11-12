@@ -23,10 +23,12 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'onsails/lspkind-nvim'
-" snip
-Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'L3MON4D3/LuaSnip'
 
+" For luasnip users
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+
+" Themes
 Plug 'gruvbox-community/gruvbox'
 Plug 'itchyny/lightline.vim'
 
@@ -44,6 +46,8 @@ Plug 'tpope/vim-commentary'
 Plug 'sbdchd/neoformat'
 
 Plug 'windwp/nvim-autopairs'
+
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 

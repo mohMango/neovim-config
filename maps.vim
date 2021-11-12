@@ -6,6 +6,10 @@ nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>pi :PlugInstall<CR>
 " PlugClean
 nnoremap <leader>pc :PlugClean<CR>
+" PlugUpdate
+nnoremap <leader>pu :PlugUpdate<CR>
+" PlugUpgrade
+nnoremap <leader>pg :PlugUpgrade<CR>
 
 " General maps
 " move line up and down
@@ -37,12 +41,22 @@ map <leader>/ gcc <Esc>
 nnoremap <leader>u :UndotreeToggle<CR>
 " new line with a-enter
 inoremap <A-enter> <Esc>o
-" Delete without yank
 
 
 "----------------------------------
-nnoremap <leader>d "_d
+" Delete without yank
+nnoremap <leader>D "_d
 nnoremap x "_x
+
+"----------------------------------
+" better undo
+inoremap , ,<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap . .<c-g>u
+" better jump
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
 "----------------------------------
 " Increment/decrement
@@ -90,5 +104,7 @@ map sl <C-w>l
 nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
+
 nmap <C-w><down> <C-w>-
 
+let g:user_emmet_leader_key='<leader>'

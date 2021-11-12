@@ -1,6 +1,7 @@
-local luasnip = require 'luasnip'
-local cmp = require 'cmp'
-local lspkind = require 'lspkind'
+local luasnip = require('luasnip')
+local cmp = require('cmp')
+local lspkind = require('lspkind')
+local nvim_lsp = require('lspconfig')
 
 cmp.setup {
   snippet = {
@@ -19,7 +20,7 @@ cmp.setup {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    ['<Tab>'] = function(fallback)
+  ['<Tab>'] = function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
@@ -28,7 +29,7 @@ cmp.setup {
         fallback()
       end
     end,
-    ['<S-Tab>'] = function(fallback)
+   ['<S-Tab>'] = function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       elseif luasnip.jumpable(-1) then
@@ -42,10 +43,10 @@ cmp.setup {
     format = lspkind.cmp_format{
       with_text = true, 
       menu = {
-        buffer = "[buf]",
+        luasnip = "[SNIP]",
+        buffer = "[BUF]",
         nvim_lsp = "[LSP]",
-        path = "[path]",
-        luasnip = "[snip]",
+        path = "[PATH]",
       }
     }
   },

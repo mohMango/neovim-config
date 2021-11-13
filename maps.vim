@@ -107,4 +107,4 @@ nmap <C-w><up> <C-w>+
 
 nmap <C-w><down> <C-w>-
 
-let g:user_emmet_leader_key='<leader>'
+let g:user_emmet_leader_key='<A>'

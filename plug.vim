@@ -49,5 +49,8 @@ Plug 'windwp/nvim-autopairs'
 
 Plug 'mattn/emmet-vim'
 
+" Mark Down
+Plug 'plasticboy/vim-markdown'
+
 call plug#end()
 

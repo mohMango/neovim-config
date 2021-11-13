@@ -8,6 +8,7 @@ set mouse=a
 set title
 set number relativenumber
 set signcolumn=yes
+set colorcolumn=80
 set smarttab
 set cindent
 set tabstop=2
@@ -42,7 +43,7 @@ set lazyredraw
 set ignorecase
 set ai "Auto indent
 set si "Smart indent
-set wrap "No Wrap lines
+set nowrap "No Wrap lines
 " Finding files - Search down into subfolders
 set path+=**
 set wildignore+=*/node_modules/*

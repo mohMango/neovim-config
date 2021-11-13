@@ -11,6 +11,9 @@ nnoremap <leader>pu :PlugUpdate<CR>
 " PlugUpgrade
 nnoremap <leader>pg :PlugUpgrade<CR>
 
+" GIT
+nnoremap <leader>g :G<CR>
+
 " General maps
 " move line up and down
 nnoremap <A-j> :m.+1<CR>==

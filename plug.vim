@@ -3,19 +3,17 @@ if has("nvim")
 endif
 
 call plug#begin()
-
+" LSP
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'neovim/nvim-lspconfig'
+Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
 
+" Git
 Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 
-Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
-
+" My Love 
 Plug 'mbbill/undotree'
-
-" LSP
-Plug 'neovim/nvim-lspconfig'
 
 " completion
 Plug 'hrsh7th/nvim-cmp'
@@ -31,7 +29,6 @@ Plug 'saadparwaiz1/cmp_luasnip'
 " Themes
 Plug 'gruvbox-community/gruvbox'
 Plug 'itchyny/lightline.vim'
-
 Plug 'folke/lsp-colors.nvim'
 
 " telescope requirements...
@@ -41,16 +38,20 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-project.nvim'
 
+" I love comments
 Plug 'tpope/vim-commentary'
 
+" add semicolon for me
 Plug 'sbdchd/neoformat'
 
+" close what I has open
 Plug 'windwp/nvim-autopairs'
 
+" fast html
 Plug 'mattn/emmet-vim'
 
 " Mark Down
-Plug 'iamcco/markdown-preview.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 
 call plug#end()

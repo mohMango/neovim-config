@@ -34,7 +34,7 @@ set foldmethod=syntax
 set foldlevelstart=20
 filetype plugin on
 set pumheight=20
-
+set isfname+=@-@
 set clipboard=unnamedplus
 
 " Don't redraw while executing macros (good performance config)

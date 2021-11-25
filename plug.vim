@@ -53,6 +53,8 @@ Plug 'mattn/emmet-vim'
 " Mark Down
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
+" Some icons
+Plug 'kyazdani42/nvim-web-devicons'
 
 call plug#end()
 

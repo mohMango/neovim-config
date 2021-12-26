@@ -14,7 +14,7 @@ local on_attach = function(client, bufnr)
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
-  local opts = { noremap=true, silent=true }
+  -- local opts = { noremap=true, silent=true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
  -- buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
@@ -39,11 +39,12 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'vimls', 'pyright', 'jsonls', 'html', 'cssls', 'tsserver' }
+local servers = { 'vimls', 'pyright', 'jsonls', 'html', 'cssls', 'tsserver', 
+                'gopls', 'yamlls', 'tailwindcss' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
-    capabilities = capabilities,
     on_attach = on_attach,
+    capabilities = capabilities,
     flags = {
       debounce_text_changes = 150,
     },

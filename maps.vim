@@ -11,6 +11,23 @@ nnoremap <leader>pu :PlugUpdate<CR>
 " PlugUpgrade
 nnoremap <leader>pg :PlugUpgrade<CR>
 
+" float term 
+nnoremap <silent> <leader>ff :FloatermNew<CR>
+tnoremap <silent> ,ff <C-\><C-n>:FloatermNew<CR>
+nnoremap <silent> <leader>fp :FloatermPrev<CR>
+tnoremap <silent> ,fp <C-\><C-n>:FloatermPrev<CR>
+nnoremap <silent> <leader>fn :FloatermNext<CR>
+tnoremap <silent> ,fn <C-\><C-n>:FloatermNext<CR>
+nnoremap <silent> <leader>` :FloatermToggle<CR>
+tnoremap <silent> ,` <C-\><C-n>:FloatermToggle<CR>
+nnoremap <silent> <leader>fk :FloatermKill<CR>
+tnoremap <silent> ,fk <C-\><C-n>:FloatermKill<CR>
+
+" save
+nnoremap <silent> <leader>w <Esc>:w<CR>
+" quit
+nnoremap <silent> <leader>q <Esc>:q<CR>
+
 " GIT
 nnoremap <leader>g :G<CR>
 
@@ -31,11 +48,11 @@ vnoremap <leader>d :t.<CR>
 
 "----------------------------------
 " next and previous buffer
-map <leader><tab> :bnext<CR>
-map <leader><S-tab> :bprevious<CR>
-map <leader>w :bdelete<CR>
+nnoremap <leader><tab> :bnext<CR>
+nnoremap <leader><S-tab> :bprevious<CR>
+nnoremap <silent> <leader>c <Esc>:bdelete<CR>
 " delete all
-map <leader><S-w> :bufdo bwipeout<CR>
+nnoremap  <leader><S-c> :bufdo bwipeout<CR>
 
 "----------------------------------
 " commentary
@@ -94,15 +111,14 @@ augroup END
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
 " Move window
-nmap <Space> <C-w>w
-map s<left> <C-w>h
-map s<up> <C-w>k
-map s<down> <C-w>j
-map s<right> <C-w>l
-map sh <C-w>h
-map sk <C-w>k
-map sj <C-w>j
-map sl <C-w>l
+map <leader><left> <C-w>h
+map <leader><up> <C-w>k
+map <leader><down> <C-w>j
+map <leader><right> <C-w>l
+map <leader>h <C-w>h
+map <leader>k <C-w>k
+map <leader>j <C-w>j
+map <leader>l <C-w>l
 " Resize window
 nmap <C-w><left> <C-w><
 nmap <C-w><right> <C-w>>
@@ -110,4 +126,4 @@ nmap <C-w><up> <C-w>+
 
 nmap <C-w><down> <C-w>-
 
-let g:user_emmet_leader_key='<A>'
+let g:user_emmet_leader_key='<A-e>'

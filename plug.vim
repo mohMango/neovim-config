@@ -25,6 +25,7 @@ Plug 'onsails/lspkind-nvim'
 " For luasnip users
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
 " Themes
 Plug 'gruvbox-community/gruvbox'
@@ -55,6 +56,12 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 
 " Some icons
 Plug 'kyazdani42/nvim-web-devicons'
+
+" Float term
+Plug 'voldikss/vim-floaterm'
+
+" File Explorer tree
+Plug 'kyazdani42/nvim-tree.lua'
 
 call plug#end()
 

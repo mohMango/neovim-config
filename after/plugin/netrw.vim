@@ -4,7 +4,7 @@ let g:netrw_browse_split = 4
 let g:netrw_winsize = 15
 
 
-nnoremap <silent> <leader>q :call ToggleNetrw()<CR>
+" nnoremap <silent> <leader>q :call ToggleNetrw()<CR>
 
 let g:NetrwIsOpen=0
 

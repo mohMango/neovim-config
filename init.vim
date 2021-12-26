@@ -74,6 +74,9 @@ au BufNewFile,BufRead *.tsx setf typescriptreact
 " Markdown
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.mdx set filetype=markdown
+" Golang
+" au BufNewFile,BufRead *.go set filetype=go
+" au BufNewFile,BufRead *.go set filetype=gomod
 
 "}}}
 
@@ -81,6 +84,7 @@ au BufNewFile,BufRead *.mdx set filetype=markdown
 " ---------------------------------------------------------------------
 runtime ./plug.vim
 runtime ./maps.vim
+runtime ./autocommands.vim
 "}}}
 
 " Syntax theme "{{{

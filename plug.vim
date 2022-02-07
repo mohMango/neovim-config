@@ -31,6 +31,7 @@ Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 Plug 'gruvbox-community/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'folke/lsp-colors.nvim'
+Plug 'hzchirs/vim-material'
 
 " telescope requirements...
 Plug 'nvim-lua/popup.nvim'

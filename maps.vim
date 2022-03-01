@@ -29,7 +29,10 @@ nnoremap <silent> <leader>w <Esc>:w<CR>
 nnoremap <silent> <leader>q <Esc>:q<CR>
 
 " GIT
-nnoremap <leader>g :G<CR>
+nnoremap <leader>gg :G<CR>
+nnoremap <leader>gc :Git commit<CR>
+nnoremap <leader>gp :Git push<CR>
+nnoremap <leader>gd :Git diff<CR>
 
 " General maps
 " move line up and down

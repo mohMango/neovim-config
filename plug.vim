@@ -25,7 +25,7 @@ Plug 'onsails/lspkind-nvim'
 " For luasnip users
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
-Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+" Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
 " Themes
 Plug 'gruvbox-community/gruvbox'

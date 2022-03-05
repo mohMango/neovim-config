@@ -107,4 +107,20 @@ colorscheme vim-material
 set exrc
 "}}}
 
-" vim: set foldmethod=marker foldlevel=0:
+" Folding {{{
+autocmd FileType vim setlocal foldmethod=marker
+autocmd FileType vim set foldlevel=0
+
+set foldmethod=indent
+set foldlevel=0
+set fillchars=fold:\ "The backslash escapes a space
+set foldtext=CustomFoldText()
+function! CustomFoldText()
+  let indentation = indent(v:foldstart -1)
+  let foldSize = 1 + v:foldend - v:foldstart
+  let foldSizeStr = " " . foldSize . " lines "
+  let foldLevelStr = repeat("+--", v:foldlevel)
+  let expansionString = repeat(" ", indentation)
+  return expansionString . foldLevelStr . foldSizeStr
+endfunction
+" }}}

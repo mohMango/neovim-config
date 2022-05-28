@@ -98,6 +98,11 @@ return packer.startup(function(use)
 
 	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
 
+	-- debug
+	use("mfussenegger/nvim-dap")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use("theHamsta/nvim-dap-virtual-text")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

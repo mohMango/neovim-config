@@ -29,8 +29,16 @@ dap.configurations.javascript = {
 	},
 }
 
--- ERROR: not work
 dap.configurations.typescript = {
+	{
+		name = "Attach to process",
+		type = "node2",
+		request = "attach",
+		processId = require("dap.utils").pick_process,
+		sourceMaps = true,
+		restart = true,
+	},
+	-- ERROR: NOT WORK
 	{
 		name = "Launch",
 		type = "node2",

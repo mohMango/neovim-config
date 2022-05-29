@@ -18,7 +18,7 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
--- Normal --
+---------------------------- Normal ----------------------------
 keymap("n", "<leader>w", ":w<CR>", opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
@@ -26,6 +26,8 @@ keymap("n", "ss", ":split<CR>", opts)
 keymap("n", "sv", ":vsplit<CR>", opts)
 keymap("n", "<leader>/", "gcc", {})
 keymap("n", "<leader>g", ":lua _LAZYGIT_TOGGLE()<CR>", term_opts)
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -45,21 +47,23 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>c", ":Bdelete<CR>", opts)
 keymap("n", "<leader><S-c>", ":bufdo :Bdelete<CR>", opts)
 
--- Insert --
+---------------------------- Insert ----------------------------
 keymap("i", "<A-enter>", "<ESC>o", opts)
+keymap("i", "<A-j>", "<Esc>:m.+1 i<CR>==gi", opts)
+keymap("i", "<A-k>", "<Esc>:m.-2 i<CR>==gi", opts)
 
--- Visual --
+---------------------------- Visual ----------------------------
 keymap("v", "<leader>/", "gc", {})
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 keymap("v", "p", '"_dP', opts)
 
--- Visual Block --
+---------------------------- Visual Block ----------------------------
 keymap("x", "<leader>/", "gc", {})
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
@@ -67,14 +71,14 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Terminal --
+---------------------------- Terminal ----------------------------
 -- Better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- Telescope --
+---------------------------- Telescope ----------------------------
 keymap("n", "<leader><space>", [[<cmd>lua require('telescope.builtin').find_files()<CR>]], opts)
 keymap(
 	"n",
@@ -96,7 +100,7 @@ keymap(
 	opts
 )
 
--- debug
+---------------------------- debug ----------------------------
 keymap("n", "<F5>", ":lua require'dap'.continue()<CR>", opts)
 keymap("n", "<leader>dq", ":lua require'dap'.terminate()<CR>", opts)
 keymap("n", "<leader>dp", ":lua require'dap'.toggle_breakpoint()<CR>", opts)

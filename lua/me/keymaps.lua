@@ -97,10 +97,11 @@ keymap(
 )
 
 -- debug
-keymap("n", "<leader>dd", ":lua require'dap'.continue()<CR>", opts)
+keymap("n", "<F5>", ":lua require'dap'.continue()<CR>", opts)
+keymap("n", "<leader>dq", ":lua require'dap'.terminate()<CR>", opts)
 keymap("n", "<leader>dp", ":lua require'dap'.toggle_breakpoint()<CR>", opts)
 keymap("n", "<leader>do", ":lua require'dap'.step_over()<CR>", opts)
 keymap("n", "<leader>di", ":lua require'dap'.step_into()<CR>", opts)
-keymap("n", "<leader>dq", ":lua require'dap'.terminate()<CR>", opts)
+keymap("n", "<leader>dl", ":lua require'dap'.step_out()<CR>", opts)
 -- ui
 keymap("n", "dk", ":lua require('dapui').eval()<CR>", opts)

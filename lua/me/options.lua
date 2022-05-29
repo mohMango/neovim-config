@@ -44,6 +44,11 @@ end
 vim.cmd([[ 
   " set colorcolumn=80
 
+  " folding
+  setlocal foldmethod=indent
+  set nofoldenable
+  set foldlevel=99
+
   " Finding files - Search down into subfolders
   set path+=**
   set wildignore+=*/node_modules/*

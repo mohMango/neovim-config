@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/mango/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/mango/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/mango/.local/share/nvim/site/pack/packer/start/null-ls.nvim",

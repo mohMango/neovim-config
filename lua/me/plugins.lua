@@ -48,7 +48,7 @@ return packer.startup(function(use)
 	-- use("gruvbox-community/gruvbox")
 	use("lifepillar/vim-gruvbox8")
 	use("mhartington/oceanic-next")
-
+	use("EdenEast/nightfox.nvim")
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions

@@ -38,16 +38,14 @@ dap.configurations.typescript = {
 		sourceMaps = true,
 		restart = true,
 	},
-	-- ERROR: NOT WORK
 	{
 		name = "Launch",
 		type = "node2",
 		request = "launch",
-		program = "${file}",
-		cwd = vim.fn.getcwd(),
+		program = "${workspaceFolder}/build/index.js",
 		sourceMaps = true,
+		cwd = vim.fn.getcwd(),
 		protocol = "inspector",
-		preLaunchTask = "npm: build",
-		outFiles = "${workspaceFolder}/build/${file}",
+		outFiles = { "${workspaceFolder}/build/*.js" },
 	},
 }

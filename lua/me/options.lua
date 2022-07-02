@@ -33,6 +33,17 @@ local options = {
 	scrolloff = 8, -- is one of my fav
 	sidescrolloff = 8,
 	incsearch = true,
+	list = true, -- Show some invisible characters (tabs...
+	confirm = true, -- confirm to save changes before exiting modified buffer
+	inccommand = "split", -- preview incremental substitute
+	joinspaces = false, -- No double spaces with join after a dot
+	pumblend = 10, -- Popup blend
+	shiftround = true, -- Round indent
+
+	foldexpr = "nvim_treesitter#foldexpr()", -- TreeSitter folding
+	foldlevel = 6,
+	foldmethod = "expr", -- TreeSitter folding
+	wildmode = "longest:full,full", -- Command-line completion mode
 }
 
 vim.opt.shortmess:append("c")

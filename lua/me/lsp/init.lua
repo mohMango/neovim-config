@@ -6,3 +6,6 @@ end
 require("me.lsp.lsp-installer")
 require("me.lsp.handlers").setup()
 require("me.lsp.null-ls")
+require("me.lsp.gdscript")
+require("me.lsp.tsserver")
+require("me.lsp.deno")

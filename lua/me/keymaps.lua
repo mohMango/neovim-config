@@ -29,6 +29,8 @@ keymap("n", "<leader>g", ":lua _LAZYGIT_TOGGLE()<CR>", term_opts)
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
+keymap("n", "<leader>z", "<cmd>ZenMod<cr>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -109,3 +111,12 @@ keymap("n", "<leader>di", ":lua require'dap'.step_into()<CR>", opts)
 keymap("n", "<leader>dl", ":lua require'dap'.step_out()<CR>", opts)
 -- ui
 keymap("n", "dk", ":lua require('dapui').eval()<CR>", opts)
+
+---------------------------- Trouble ----------------------------
+vim.api.nvim_set_keymap("n", "<leader>tt", "<cmd>Trouble<cr>", opts)
+vim.api.nvim_set_keymap("n", "<leader>tw", "<cmd>Trouble workspace_diagnostics<cr>", opts)
+vim.api.nvim_set_keymap("n", "<leader>td", "<cmd>Trouble document_diagnostics<cr>", opts)
+vim.api.nvim_set_keymap("n", "<leader>tl", "<cmd>Trouble loclist<cr>", opts)
+vim.api.nvim_set_keymap("n", "<leader>tq", "<cmd>Trouble quickfix<cr>", opts)
+vim.api.nvim_set_keymap("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
+vim.api.nvim_set_keymap("n", "<leader>to", "<cmd>TodoTrouble<cr>", opts)

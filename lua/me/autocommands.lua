@@ -25,6 +25,12 @@ vim.cmd([[
     autocmd VimResized * tabdo wincmd = 
   augroup end
 
+  " Check if we need to reload the file when it changed
+  au FocusGained * :checktime
+
+  " go to last loc when opening a buffer
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g`\"" | endif
+
   augroup _transparent
     autocmd!
     autocmd ColorScheme * hi Normal guibg=none ctermbg=none

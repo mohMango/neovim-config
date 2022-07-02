@@ -49,6 +49,7 @@ return packer.startup(function(use)
 	use("lifepillar/vim-gruvbox8")
 	use("mhartington/oceanic-next")
 	use("EdenEast/nightfox.nvim")
+
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions
@@ -104,6 +105,10 @@ return packer.startup(function(use)
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 	use("theHamsta/nvim-dap-virtual-text")
 
+	use("folke/zen-mode.nvim")
+	use("folke/trouble.nvim")
+	use("folke/todo-comments.nvim")
+	use("mbbill/undotree")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

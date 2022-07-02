@@ -1,4 +1,4 @@
-local colorscheme = "nightfox" -- OceanicNext or gruvbox8
+local colorscheme = "nightfox" -- OceanicNext, gruvbox8, nightfox or tokyonight
 
 require("nightfox").setup({
 	options = {
@@ -10,9 +10,6 @@ require("nightfox").setup({
 		},
 	},
 })
-
--- setup must be called before loading
-vim.cmd("colorscheme nightfox")
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
